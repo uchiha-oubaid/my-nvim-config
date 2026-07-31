@@ -23,3 +23,19 @@ require("lazy").setup({
 })
 
 vim.cmd('colorscheme gruber-darker')
+
+--vim.api.nvim_create_autocmd("FileType", {
+--    pattern = "odin",
+--    callback = function()
+--        -- Remove ':' from both potential indent key settings
+--        vim.opt_local.indentkeys:remove(":")
+--        vim.opt_local.cinkeys:remove(":")
+--        
+--        -- If using indentexpr, also modify the expression
+--        if vim.opt_local.indentexpr:get() ~= "" then
+--            -- This disables the indent expression's : behavior
+--            vim.opt_local.indentexpr = "v:lua.require'odin.indent'.get_indent()"
+--            -- But only if you have the odin indent module
+--        end
+--    end,
+--})

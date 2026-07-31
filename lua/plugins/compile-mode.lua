@@ -35,7 +35,7 @@ return {
                         --   end
                         -- end,
                         -- :h compile_mode.default_command
-                        default_command = "make -k ",
+                        default_command = "",
                         -- Use `baleia` for parsing ANSI escape codes in the output.
                         -- :h compile_mode.baleia_setup
                         baleia_setup = false,
