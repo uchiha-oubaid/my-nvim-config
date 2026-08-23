@@ -29,7 +29,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 require("lazy").setup({
     spec = {import = "plugins"},
-    { "gruber-darker/nvim", name = "gruber-darker" },
 })
 
-vim.cmd('colorscheme gruber-darker')
+
+
+vim.cmd.colorscheme("theme")
+
+
+
