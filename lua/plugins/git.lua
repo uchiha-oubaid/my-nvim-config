@@ -11,5 +11,11 @@ return {
     cmd = "Neogit",
     keys = {
         { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
-    }
+    },
+
+    config = function()
+        require('neogit').setup({
+            highlight = { enabled = false }
+        })
+    end
 }

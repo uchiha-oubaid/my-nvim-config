@@ -8,14 +8,9 @@ return {
                 theme = 'auto',
                 component_separators = { left = '', right = ''},
                 section_separators = { left = '', right = ''},
-                disabled_filetypes = {
-                    statusline = {},
-                    winbar = {},
-                },
-                ignore_focus = {},
                 always_divide_middle = true,
                 always_show_tabline = true,
-                globalstatus = false,
+                globalstatus = true,
                 refresh = {
                     statusline = 1000,
                     tabline = 1000,
@@ -37,9 +32,8 @@ return {
             },
             sections = {
                 lualine_a = {'mode'},
-                lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
-                lualine_x = {'encoding', 'fileformat', 'filetype'},
+                lualine_x = {'filetype'},
                 lualine_y = {'progress'},
                 lualine_z = {'location'}
             },
@@ -51,10 +45,6 @@ return {
                 lualine_y = {},
                 lualine_z = {}
             },
-            tabline = {},
-            winbar = {},
-            inactive_winbar = {},
-            extensions = {}
         }
     end
 }

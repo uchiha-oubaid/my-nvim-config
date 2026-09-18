@@ -38,7 +38,7 @@ return {
                         default_command = "",
                         -- Use `baleia` for parsing ANSI escape codes in the output.
                         -- :h compile_mode.baleia_setup
-                        baleia_setup = false,
+                        baleia_setup = true,
                         -- Expand commands, like `:!` (e.g. `:Compile echo %`)
                         -- :h compile_mode.bang_expansion
                         bang_expansion = false,
@@ -69,7 +69,7 @@ return {
                         recompile_no_fail = false,
                         -- Ask to save unsaved buffers before compiling.
                         -- :h compile-mode.ask_about_save
-                        ask_about_save = true,
+                        ask_about_save = false,
                         -- Ask to interrupt already running commands.
                         -- :h compile-mode.ask_to_interrupt
                         ask_to_interrupt = true,
@@ -91,20 +91,20 @@ return {
                         clear_environment = false,
                         -- Fix compilation for plugins like `nvim-cmp`.
                         -- :h compile-mode.input_word_completion
-                        input_word_completion = false,
+                        input_word_completion = true,
                         -- Hide the compliation buffer.
                         -- :h compile-mode.hidden_buffer
                         hidden_buffer = false,
                         -- Automatically focus the compilation buffer.
                         -- :h compile-mode.focus_compilation_buffer
-                        focus_compilation_buffer = false,
+                        focus_compilation_buffer = true,
                         -- Automatically move the cursor to the end of the compilation buffer.
                         -- :h compile-mode.auto_scroll
-                        auto_scroll = true,
+                        auto_scroll = false,
                         -- Jump back past the end/beginning of the errors
                         -- with `:NextError`/`:PrevError`
                         -- :h compile-mode.use_circular_error_navigation
-                        use_circular_error_navigation = false,
+                        use_circular_error_navigation = true,
                         -- Print debug information.
                         -- :h compile-mode.debug
                         debug = false,

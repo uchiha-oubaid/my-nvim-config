@@ -12,3 +12,5 @@ vim.opt.backup = false
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.guicursor = "a:block"
+vim.opt.splitbelow = true
+vim.opt.splitright = true

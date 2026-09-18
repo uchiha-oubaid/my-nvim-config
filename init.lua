@@ -17,6 +17,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "terminal", "compilation" }, -- adjust to your compile-mode buffer's filetype
+    callback = function()
+        vim.opt_local.scrollback = 5000
+    end,
+})
+
 vim.api.nvim_create_autocmd("BufEnter", {
     pattern = "*",
     callback = function()
@@ -31,9 +38,4 @@ require("lazy").setup({
     spec = {import = "plugins"},
 })
 
-
-
-vim.cmd.colorscheme("theme")
-
-
-
+vim.cmd.colorscheme("gruber-darker")

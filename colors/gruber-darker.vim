@@ -19,13 +19,13 @@ hi Boolean guifg=#ffdd33
 hi Float guifg=#9e95c7
 
 hi Identifier guifg=#e4e4e4
-hi Function guifg=#e4e4e4
+hi Function guifg=#95a99f
 
 hi Statement guifg=#ffdd33
 hi Conditional guifg=#ffdd33
 hi Repeat guifg=#ffdd33
 hi Label guifg=#ffdd33
-hi Operator guifg=#ffdd33
+hi Operator guifg=#e4e4e4
 hi Keyword guifg=#ffdd33
 hi Exception guifg=#ffdd33
 
@@ -92,6 +92,31 @@ hi DiffAdd guifg=#181818 guibg=#73c936
 hi DiffChange guifg=#181818 guibg=#ffdd33
 hi DiffDelete guifg=#181818 guibg=#f43841
 hi DiffText guifg=#181818 guibg=#96a6c8
+
+" ============================================
+" Lualine diff — explicit readable fg on dark bg
+" ============================================
+hi LuaLineDiffAdd    guifg=#73c936 guibg=#282828 gui=NONE
+hi LuaLineDiffChange guifg=#ffdd33 guibg=#282828 gui=NONE
+hi LuaLineDiffDelete guifg=#f43841 guibg=#282828 gui=NONE
+
+" ============================================
+" Neogit diff body — subtle bg tint, readable fg
+" ============================================
+hi NeogitDiffAdd        guifg=#e4e4e4 guibg=#1e2a18
+hi NeogitDiffAddHighlight guifg=#181818 guibg=#73c936
+hi NeogitDiffDelete     guifg=#e4e4e4 guibg=#2a1818
+hi NeogitDiffDeleteHighlight guifg=#181818 guibg=#f43841
+hi NeogitDiffContext    guifg=#e4e4e4 guibg=#181818
+hi NeogitDiffContextHighlight guifg=#e4e4e4 guibg=#282828
+
+" File-level markers in the status buffer
+hi NeogitChangeAdded    guifg=#73c936 guibg=NONE gui=bold
+hi NeogitChangeDeleted  guifg=#f43841 guibg=NONE gui=bold
+hi NeogitChangeModified guifg=#ffdd33 guibg=NONE gui=bold
+hi NeogitChangeRenamed  guifg=#96a6c8 guibg=NONE gui=bold
+hi NeogitChangeUpdated  guifg=#95a99f guibg=NONE gui=bold
+hi NeogitChangeUnmerged guifg=#f43841 guibg=NONE gui=bold
 
 " ============================================
 " Let baleia.nvim control error highlights
