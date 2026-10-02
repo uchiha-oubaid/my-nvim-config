@@ -7,12 +7,25 @@ return {
             "m00qek/baleia.nvim", tag = "v1.3.0",
         },
         config = function()
+            -- Precise hex overrides derived from the Gruber Darker palette
+            vim.api.nvim_set_hl(0, "CompileModeError", { fg = "#f43841", bold = true })   -- Gruber Red
+            vim.api.nvim_set_hl(0, "CompileModeWarning", { fg = "#ffdd33", bold = true }) -- Gruber Yellow
+
             vim.g.compile_mode = {
                 default_command = "",
                 baleia_setup = true,
                 bang_expansion = false,
                 directory_change_matchers = {},
-                error_regexp_table = {},
+                error_regexp_table = {
+                    odin = {
+                        regex = [[\v^([^(]+)\((\d+):(\d+)\)\s*(Syntax Error|Warning|Error)?:?\s*(.*)]],
+                        filename = 1,
+                        row = 2,
+                        col = 3,
+                        type = 4,
+                        text = 5,
+                    },
+                },
                 error_ignore_file_list = {},
                 error_threshold = require("compile-mode").level.WARNING,
                 auto_jump_to_first_error = false,
@@ -33,16 +46,8 @@ return {
                 use_circular_error_navigation = true,
                 debug = false,
                 use_pseudo_terminal = false,
-                error_regexp_table = {
-                    odin = {
-                        regex = [[\v^(.{-})\((\d+):(\d+)\) (Error|Warning): (.*)$]],
-                        filename = 1,
-                        row = 2,
-                        col = 3,
-                        type = 4,
-                        text = 5,
-                    },
-                },
-            }end
-        }
+            }
+        end
     }
+}
+
