@@ -13,7 +13,8 @@ return {
 
             vim.g.compile_mode = {
                 default_command = "",
-                baleia_setup = true,
+                ansi_color = { kind = "render"},
+                --baleia_setup = true,
                 bang_expansion = false,
                 directory_change_matchers = {},
                 error_regexp_table = {
