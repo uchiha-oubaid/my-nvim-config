@@ -1,4 +1,5 @@
 vim.cmd("set expandtab")
+vim.cmd("set termguicolors")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
@@ -14,7 +15,7 @@ vim.opt.updatetime = 50
 vim.opt.guicursor = "a:block"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.guifont = "Input Mono:h18"
+--vim.opt.guifont = "Iosevka:h18"
 
 if vim.g.neovide then
     vim.keymap.set("v", "<D-c>", '"+y', { desc = "Copy to clipboard" })

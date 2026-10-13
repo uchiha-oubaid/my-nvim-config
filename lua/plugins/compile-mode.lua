@@ -43,7 +43,7 @@ return {
                 input_word_completion = false,
                 hidden_buffer = false,
                 focus_compilation_buffer = true,
-                auto_scroll = false,
+                auto_scroll = true,
                 use_circular_error_navigation = true,
                 debug = false,
                 use_pseudo_terminal = false,
